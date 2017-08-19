@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>BINGO</title>
+    <style type="text/css">
+        body {
+            background: #fff;
+            line-height: normal;
+            font-family: Helvetica, arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+        .wrap {
+            display: block;
+            width: 310px;
+            margin:0 auto;
+        }
+        .body-bingo {
+            display: inline-block;
+            margin: 1em auto;
+        }
+
+        .header-bingo {
+            background: #111;
+            color: #fff;
+            font-weight: bold;
+        }
+        .header-bingo .spec {
+            border-color: transparent;
+        }
+        .wrapped {
+            display: block;
+        }
+        .wrapped:after,
+        .wrapped:before {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .spec {
+            line-height: 40px;
+            border: 1px solid #ddd;
+            border-right-width: 0;
+            border-bottom-width: 0;
+            display: block;
+            float: left;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+            margin:0;
+            text-align: center;
+            cursor: pointer;
+        }
+        .wrapped .spec:last-child {
+            border-right-width:1px;
+        }
+        .wrapped:last-child .spec {
+            border-bottom-width: 1px;
+        }
+        .body-bingo .spec.selected {
+            background: #00aeff;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="bingo-wrap">
+            <div class="body-bingo">
+                <div class="header-bingo wrapped">
+                    <div class="spec">B</div>
+                    <div class="spec">I</div>
+                    <div class="spec">N</div>
+                    <div class="spec">G</div>
+                    <div class="spec">O</div>
+                </div>
+            </div>
+        </div>
+        <div id="bingo-random wrapped">
+            <button id="stop">TRY AGAIN</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
